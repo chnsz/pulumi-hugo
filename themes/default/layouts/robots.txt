@@ -1,0 +1,10 @@
+User-agent: *
+{{- if ne hugo.Environment "production" }}
+Disallow: *
+{{ end }}
+
+# Disallow certain pages that are preceived as soft-404s.
+Disallow: /docs/search/$
+
+Sitemap: https://www.pulumi.com/sitemap.xml
+Host: www.pulumi.com
